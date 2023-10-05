@@ -71,9 +71,9 @@ List* get_adj_nodes(Node* n){
     for(int i=0;i<9;i++){
       for(int j=0;j<9;j++){
         if(n->sudo[i][j]==0){
+          Node *copia;
           for(int num=1;num<=9; num++){   
-            
-            Node *copia =copy(n);
+            copia =copy(n);
             copia->sudo[i][j]=num;
             pushBack(list,copia);
           }
