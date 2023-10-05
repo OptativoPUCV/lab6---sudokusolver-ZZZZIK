@@ -2,3 +2,27 @@ Thu 05 Oct 2023 04:26:26 AM UTC:
  tests:  0|5
 total_score: 0/70
 cfcb7ef
+Thu 05 Oct 2023 06:25:55 AM UTC: 
+ sudoku.c | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:73:5: error: expected expression before ‘}’ token
+   73 |     }
+      |     ^
+sudoku.c:72:15: error: unused variable ‘j’ [-Werror=unused-variable]
+   72 |       for(int j=0;i<9;i++)
+      |               ^
+sudoku.c:74:18: error: ‘i’ undeclared (first use in this function)
+   74 |       if(n->sudo[i][j]==0)
+      |                  ^
+sudoku.c:74:18: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:74:21: error: ‘j’ undeclared (first use in this function)
+   74 |       if(n->sudo[i][j]==0)
+      |                     ^
+sudoku.c:79:1: error: control reaches end of non-void function [-Werror=return-type]
+   79 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+36d5dc3
