@@ -73,10 +73,12 @@ List* get_adj_nodes(Node* n){
         if(n->sudo[i][j]==0){
       
           for(int num=1;num<=9; num++){   
-            n->sudo[i][j]=num;
             Node * copia= copy(n);
+
+            copia->sudo[i][j]=num;
             pushBack(list,copia);
-          }    
+          }
+          return list;
         }
       }
     }
