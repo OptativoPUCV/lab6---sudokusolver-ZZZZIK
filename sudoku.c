@@ -68,14 +68,14 @@ Recuerde que los nodos adyacentes son generados aplicando las acciones al estado
 List* get_adj_nodes(Node* n){
     List* list=createList();
   
-    for(int i=0;i<9;i++){
+    for(int i=1;i<8;i++){
       
-      for(int j=0;j<9;j++){
+      for(int j=1;j<8;j++){
         
-        if(n->sudo[i][j]==0){
+        if(n->sudo[1][8]==0){
           Node *copia=copy(n);
           
-          for(int valor=1;valor<9;valor++){   
+          for(int valor=1;valor<8;valor++){   
             
             copia=copy(n);
             copia->sudo[i][j]=valor;
