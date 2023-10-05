@@ -156,3 +156,21 @@ Thu 05 Oct 2023 07:20:57 AM UTC:
  tests:  2|4
 total_score: 15/70
 1bd965c
+Thu 05 Oct 2023 07:21:13 AM UTC: 
+ sudoku.c | 19 +------------------
+ 1 file changed, 1 insertion(+), 18 deletions(-)
+test.c: In function ‘adj_test1’:
+test.c:62:17: error: implicit declaration of function ‘get_adj_nodes’ [-Werror=implicit-function-declaration]
+   62 |     List* adj = get_adj_nodes(initial);
+      |                 ^~~~~~~~~~~~~
+test.c:62:17: error: initialization of ‘List *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+test.c:95:9: error: assignment to ‘List *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   95 |     adj = get_adj_nodes(initial);
+      |         ^
+test.c: In function ‘test_mod_adj’:
+test.c:155:17: error: initialization of ‘List *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  155 |     List* adj = get_adj_nodes(initial);
+      |                 ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7433f1a
