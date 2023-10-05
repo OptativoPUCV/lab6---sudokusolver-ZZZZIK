@@ -115,3 +115,14 @@ Thu 05 Oct 2023 06:59:47 AM UTC:
  tests:  0|5
 total_score: 0/70
 ce3c73e
+Thu 05 Oct 2023 07:04:52 AM UTC: 
+ sudoku.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:78:13: error: ‘copia’ undeclared (first use in this function)
+   78 |             copia->sudo[i][j]=num;
+      |             ^~~~~
+sudoku.c:78:13: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+2be5425
