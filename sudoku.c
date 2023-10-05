@@ -87,6 +87,8 @@ int is_valid(Node* n){
       if(numero!=0){
         if(arreglo[numero]==0){
           arreglo[numero]=1;
+        }else{
+          return 0;
         }
       }
     }
