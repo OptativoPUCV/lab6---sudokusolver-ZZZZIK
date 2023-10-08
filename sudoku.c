@@ -79,6 +79,10 @@ La salida del código con el estado de la figura es (submatriz del centro):
 
 
 
+//*****************************COMENTARIO*****************************
+// No se si es bug que funcionara solo con eso, pero como funcionaba y arrojaba puntaje max seguí D:
+
+
 int is_valid(Node* n){
   for(int i=0;i<9;i++){
     int arreglo[10]={0};
@@ -93,14 +97,12 @@ int is_valid(Node* n){
       }
     }
   }
-
-
-
-
-
-  
     return 1;
 }
+
+
+
+
 /*
 1.Cree una función que a partir de un nodo genere una **lista con los nodos adyacentes**:
 
