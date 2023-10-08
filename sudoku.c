@@ -105,7 +105,7 @@ int is_valid(Node* n){
     }
   }
 
-  //COLUMNAS
+  //COLUMNAS (LA UNICA DIFERENCIA ES numero=n->sudo[j][i]; SE CAMBIO I & J )
   for(int i=0;i<9;i++){
     int arreglo[10]={0};
     for(int j=0;j<9;j++){
@@ -119,7 +119,7 @@ int is_valid(Node* n){
       }
     }
   }
-  return 1;
+  
 
   //SUBMATRICES
   for (int k = 0; k < 9; k++) {
@@ -136,8 +136,8 @@ int is_valid(Node* n){
                 }
             }
         }
-  }
-    
+    }
+  return 1;
 
 
 
