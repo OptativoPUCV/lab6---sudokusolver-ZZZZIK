@@ -184,18 +184,14 @@ List* get_adj_nodes(Node* n){
       for(int j=0;j<9;j++){
         int numero = n->sudo[i][j];
         if(numero==0){
-          //Node *copia=copy(n);
-          for(int valor=0;valor<9;valor++){  
-            
+          for(int valor=0;valor<9;valor++){         
             n->sudo[i][j]=valor+1;
             if (is_valid(n)){
               Node *copia=copy(n);
               copia=copy(n);
-              //copia->sudo[i][j]=valor+1;
               pushBack(list,copia);
             }
-          }
-          
+          }  
           return list;
         }
       }
