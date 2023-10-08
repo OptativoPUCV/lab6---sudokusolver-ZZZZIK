@@ -386,3 +386,14 @@ sudoku.c:142:17: error: unused variable ‘copia’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 f286759
+Sun 08 Oct 2023 06:34:50 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:142:17: error: unused variable ‘copia’ [-Werror=unused-variable]
+  142 |           Node *copia=copy(n);
+      |                 ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+931a22d
