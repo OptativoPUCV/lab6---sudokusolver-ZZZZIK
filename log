@@ -369,3 +369,20 @@ Sun 08 Oct 2023 06:34:29 AM UTC:
  tests:  3|4
 total_score: 20/70
 62f0da9
+Sun 08 Oct 2023 06:34:40 AM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:147:19: error: redefinition of ‘copia’
+  147 |             Node *copia=copy(n);
+      |                   ^~~~~
+sudoku.c:144:19: note: previous definition of ‘copia’ with type ‘Node *’
+  144 |             Node *copia=copy(n);
+      |                   ^~~~~
+sudoku.c:142:17: error: unused variable ‘copia’ [-Werror=unused-variable]
+  142 |           Node *copia=copy(n);
+      |                 ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f286759
