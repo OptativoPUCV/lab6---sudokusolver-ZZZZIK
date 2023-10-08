@@ -500,3 +500,14 @@ sudoku.c:121:7: error: unused variable ‘arreglo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 71b9098
+Sun 08 Oct 2023 07:13:48 AM UTC: 
+ sudoku.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:109:7: error: ‘i’ may be used uninitialized [-Werror=maybe-uninitialized]
+  109 |   int i,arreglo[10]={0};
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+dabd7f6
