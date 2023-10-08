@@ -106,10 +106,10 @@ int is_valid(Node* n){
   }
 
   //COLUMNAS}
-  int i=0,arreglo[10]={0};
+  int i,arreglo[10]={0};
   for(int j=0; j<9 ; j++){
-    int numero = n->sudo[i][j];
     
+    int numero = n->sudo[i][j];
     if(numero!=0){
       if(arreglo[numero]==0){
         arreglo[numero]=1;
@@ -117,17 +117,14 @@ int is_valid(Node* n){
         return 0;
       }
     }
-  for(int k=0;k<9;k++){
-    arreglo[k]=0;
+    if(j==8){
+      i++;
+      j=0;
+      for(int k=0;k<9;k++){
+        arreglo[k]=0;
+      }
+    }
   }
-  i++;
-  }
-  
-  
-  
-  
-  
-  
   return 1;
 
 
