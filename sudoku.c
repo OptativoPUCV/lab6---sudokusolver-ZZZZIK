@@ -117,7 +117,7 @@ int is_valid(Node* n){
         return 0;
       }
     }
-    if(j==8){
+    if(j%9==8){
       i++;
       j=0;
       for(int k=0;k<9;k++){
