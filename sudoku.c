@@ -141,7 +141,7 @@ List* get_adj_nodes(Node* n){
         if(numero==0){
           Node *copia=copy(n);
           for(int valor=0;valor<9;valor++){           
-            Node *copia=copy(n);
+            
             copia->sudo[i][j]=valor+1;
             copia=copy(n);
             
