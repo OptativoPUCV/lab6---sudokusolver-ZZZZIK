@@ -141,13 +141,14 @@ List* get_adj_nodes(Node* n){
         if(numero==0){
           //Node *copia=copy(n);
           for(int valor=0;valor<9;valor++){           
-            Node *copia=copy(n);
-            copia=copy(n);
-            copia->sudo[i][j]=valor+1;
-            
-            
-            
-            pushBack(list,copia);
+           
+
+            if (is_valid(n)){
+              Node *copia=copy(n);
+              copia=copy(n);
+              copia->sudo[i][j]=valor+1;
+              pushBack(list,copia);
+            }
             /*
             if(is_valid(n)){
               //copia->sudo[i][j]=valor+1;
