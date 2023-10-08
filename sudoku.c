@@ -147,12 +147,14 @@ List* get_adj_nodes(Node* n){
             
             
             pushBack(list,copia);
+            /*
             if(is_valid(n)){
               //copia->sudo[i][j]=valor+1;
               //copia=copy(n);
               //copia->sudo[i][j]=valor+1;
               pushBack(list,copia);
             }
+            */
           }
           return list;
         }
