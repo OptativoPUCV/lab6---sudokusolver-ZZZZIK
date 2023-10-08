@@ -117,11 +117,12 @@ int is_valid(Node* n){
         return 0;
       }
     }
-  }
   for(int k=0;k<9;k++){
     arreglo[k]=0;
   }
   i++;
+  }
+  
   
   
   

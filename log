@@ -522,3 +522,14 @@ sudoku.c:109:7: error: ‘i’ may be used uninitialized [-Werror=maybe-uninitia
 cc1: all warnings being treated as errors
 Compilation failed
 d7cf64c
+Sun 08 Oct 2023 07:17:02 AM UTC: 
+ sudoku.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:109:7: error: ‘i’ may be used uninitialized [-Werror=maybe-uninitialized]
+  109 |   int i,arreglo[10]={0};
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+00e0ee3
