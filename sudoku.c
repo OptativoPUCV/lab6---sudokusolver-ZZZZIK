@@ -119,7 +119,18 @@ Recuerde que los nodos adyacentes son generados aplicando las acciones al estado
 
 > - Para el caso del ejemplo, la función debería retornar una lista con **9 nodos**. Cada uno de ellos idéntico al nodo original pero cambiando el valor de la primera casilla vacía, es decir: sudo[0][2], por 1, 2, ..., 9.
 > - Utilice la función Node* copy(Node* n) para copiar nodos.
+
+//////////////////////////////////////////////////////////////////
+
+
+3.Modifique la función *get_adj_nodes* para que sólo los nodos válidos sean retornados (use la función *is_valid*).
+
+
+
 */
+
+
+
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
@@ -130,9 +141,11 @@ List* get_adj_nodes(Node* n){
         if(numero==0){
           Node *copia=copy(n);
           for(int valor=0;valor<9;valor++){     
-            copia=copy(n);
-            copia->sudo[i][j]=valor+1;
-            pushBack(list,copia);
+            if(is_valid(n)){
+              copia=copy(n);
+              copia->sudo[i][j]=valor+1;
+              pushBack(list,copia);
+            }
           }
           return list;
         }
