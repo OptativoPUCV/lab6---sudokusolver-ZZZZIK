@@ -183,7 +183,7 @@ List* get_adj_nodes(Node* n){
     for(int i=0;i<9;i++){
       for(int j=0;j<9;j++){
         int numero = n->sudo[i][j];
-        if(n->sudo[i][j]==0){
+        if(numero==0){
           //Node *copia=copy(n);
           for(int valor=0;valor<9;valor++){           
            
