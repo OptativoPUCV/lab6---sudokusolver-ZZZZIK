@@ -84,6 +84,13 @@ La salida del código con el estado de la figura es (submatriz del centro):
 
 
 int is_valid(Node* n){
+  
+  // - No se repitan números en las filas
+  // - No se repitan números en las columnas
+  // - No se repitan números en las submatrices de 3x3
+  
+  //FILAS
+  
   for(int i=0;i<9;i++){
     int arreglo[10]={0};
     for(int j=0;j<9;j++){
@@ -97,7 +104,40 @@ int is_valid(Node* n){
       }
     }
   }
-    return 1;
+
+  //COLUMNAS}
+  int i,arreglo[10]={0};
+  for(int j=0; j<9 ; j++){
+    
+    int numero = n->sudo[i][j];
+    if (numero==0){
+      arreglo[numero] = 1;
+    }
+
+
+    
+    if (k==8) {
+      int arreglo[10]={0};
+      i++;
+      k=0;
+    }
+  }
+
+  
+  
+  
+  
+  
+  
+  return 1;
+
+
+
+
+
+
+
+  
 }
 
 
@@ -142,7 +182,6 @@ List* get_adj_nodes(Node* n){
           //Node *copia=copy(n);
           for(int valor=0;valor<9;valor++){           
            
-
             if (is_valid(n)){
               Node *copia=copy(n);
               copia=copy(n);
