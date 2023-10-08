@@ -109,7 +109,7 @@ int is_valid(Node* n){
   int i=0,arreglo[10]={0};
   for(int j=1; j<81 ; j++){
     
-    int numero = n->sudo[i][j-1];
+    int numero = n->sudo[i][j%9];
     if(numero!=0){
       if(arreglo[numero]==0){
         arreglo[numero]=1;
