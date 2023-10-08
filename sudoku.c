@@ -105,7 +105,7 @@ int is_valid(Node* n){
     }
   }
 
-  //COLUMNAS}
+  //COLUMNAS
   for(int i=0;i<9;i++){
     int arreglo[10]={0};
     for(int j=0;j<9;j++){
@@ -121,8 +121,23 @@ int is_valid(Node* n){
   }
   return 1;
 
-
-
+  //SUBMATRICES
+  for (int k = 0; k < 9; k++) {
+        int arreglo[10] = {0};
+        for (int p = 0; p < 9; p++) {
+            int i = 3 * (k / 3) + (p / 3);
+            int j = 3 * (k % 3) + (p % 3);
+            int numero = n->sudo[i][j];
+            if (numero != 0) {
+                if (arreglo[numero] == 0) {
+                    arreglo[numero] = 1;
+                } else {
+                    return 0;
+                }
+            }
+        }
+  }
+    
 
 
 
