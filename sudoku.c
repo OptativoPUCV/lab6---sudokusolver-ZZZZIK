@@ -142,8 +142,9 @@ List* get_adj_nodes(Node* n){
           Node *copia=copy(n);
           for(int valor=1;valor<10;valor++){           
             Node *copia=copy(n);
-            copia=copy(n);
             copia->sudo[i][j]=valor+1;
+            copia=copy(n);
+            
             
             pushBack(list,copia);
             if(is_valid(n)){
