@@ -106,7 +106,7 @@ int is_valid(Node* n){
   }
 
   //COLUMNAS}
-  int i,arreglo[10]={0};
+  int i=0,arreglo[10]={0};
   for(int j=0; j<9 ; j++){
     
     int numero = n->sudo[i][j];
