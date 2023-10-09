@@ -249,20 +249,19 @@ Node* DFS(Node* initial, int* cont){
     List * lista_adyacentes= get_adj_nodes(nodo_sacado);
     Node * nodo_current= first(lista_adyacentes);
 
-    
     while(nodo_current!=NULL){
       push(Pila_S,nodo_current);
       nodo_current=next(lista_adyacentes);
     }
     
-    /*
+    
     Node * current2= first(lista_adyacentes);
     while(current2!=NULL){
       free(current2);
       current2=next(lista_adyacentes);
     }
     cont++;
-    */
+    
     
   }
   return NULL;
