@@ -244,9 +244,9 @@ Node* DFS(Node* initial, int* cont){
       return nodo_sacado;
     }
     
+
+    
     cont++;
-    
-    
   }
   
   
