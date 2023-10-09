@@ -255,13 +255,15 @@ Node* DFS(Node* initial, int* cont){
       nodo_current=next(lista_adyacentes);
     }
     
-
+    /*
     Node * current2= first(lista_adyacentes);
     while(current2!=NULL){
       free(current2);
       current2=next(lista_adyacentes);
     }
     cont++;
+    */
+    
   }
   return NULL;
 }
