@@ -239,7 +239,7 @@ Node* DFS(Node* initial, int* cont){
   push(Pila_S, initial);
   while (!is_empty(Pila_S)){
     (*cont)++;
-    Node *  nodo_sacado = first(Pila_S);
+    Node *  nodo_sacado = top(Pila_S);
     pop(Pila_S);
     
     if (is_final(nodo_sacado)){
