@@ -254,13 +254,14 @@ Node* DFS(Node* initial, int* cont){
       push(Pila_S,nodo_current);
       nodo_current=next(lista_adyacentes);
     }
-    cont++;
+    
 
     Node * current2= first(lista_adyacentes);
     while(current2!=NULL){
       free(current2);
       current2=next(lista_adyacentes);
     }
+    cont++;
   }
   return NULL;
 }
