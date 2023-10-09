@@ -218,11 +218,11 @@ int is_final(Node* n){
 1. Cree un stack S (pila) e inserte el nodo.
 2. Mientras el stack S no se encuentre vacío:
 
-   a) Saque y elimine el primer nodo de S.
+   a) Saque y elimine el primer nodo de S.   / 
    
-   b) Verifique si corresponde a un estado final, si es así retorne el nodo.
+   b) Verifique si corresponde a un estado final, si es así retorne el nodo.   /
    
-   c) Obtenga la lista de nodos adyacentes al nodo.
+   c) Obtenga la lista de nodos adyacentes al nodo.   /
    
    d) Agregue los nodos de la lista (uno por uno) al stack S.
    
@@ -238,14 +238,23 @@ Node* DFS(Node* initial, int* cont){
   Stack * Pila_S = createStack();
   push(Pila_S, initial);
   while (is_empty(Pila_S)==0){
+    
     Node *  nodo_sacado = first(Pila_S);
     pop(Pila_S);
+    
     if (is_final(nodo_sacado)==1){
       return nodo_sacado;
     }
-    
 
+    List * lista_adyacentes= get_adj_nodes(nodo_sacado);
+    Node* nodo_current= first(lista_adyacentes);
     
+    while(nodo_current!=NULL){
+      push(Pila_S,nodo_current);
+      nodo_current=next(lista_adyacentes);
+    }
+    free(nodo_current);
+
     cont++;
   }
   
