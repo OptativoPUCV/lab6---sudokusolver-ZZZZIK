@@ -184,7 +184,7 @@ List* get_adj_nodes(Node* n){
             n->sudo[i][j]=valor+1;
             if (is_valid(n)){
               Node *copia=copy(n);
-              copia=copy(n);
+              //copia=copy(n);
               pushBack(list,copia);
             }
           }  
@@ -253,9 +253,9 @@ Node* DFS(Node* initial, int* cont){
       push(Pila_S,nodo_current);
       nodo_current=next(lista_adyacentes);
     }
-
+    //liberar memoria del nodo aki
     free(nodo_current);
-    //liberar memoria
+    
   }
   return NULL;
 }
