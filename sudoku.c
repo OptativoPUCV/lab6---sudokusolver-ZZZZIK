@@ -238,7 +238,7 @@ Node* DFS(Node* initial, int* cont){
   Stack * Pila_S = createStack();
   push(Pila_S, initial);
   while (!is_empty(Pila_S)){
-    (*cont)++;
+    cont++;
     Node *  nodo_sacado = top(Pila_S);
     pop(Pila_S);
     
