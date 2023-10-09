@@ -242,7 +242,7 @@ Node* DFS(Node* initial, int* cont){
     Node *  nodo_sacado = first(Pila_S);
     pop(Pila_S);
     
-    if (is_final(nodo_sacado)==1){
+    if (is_final(nodo_sacado)){
       return nodo_sacado;
     }
 
