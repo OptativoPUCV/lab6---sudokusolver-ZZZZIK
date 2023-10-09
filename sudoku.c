@@ -242,7 +242,7 @@ Node* DFS(Node* initial, int* cont){
     Node *  nodo_sacado = top(Pila_S);
     pop(Pila_S);
     
-    if (is_final(nodo_sacado)){
+    if (is_final(nodo_sacado)==1){
       return nodo_sacado;
     }
 
@@ -253,15 +253,16 @@ Node* DFS(Node* initial, int* cont){
       push(Pila_S,nodo_current);
       nodo_current=next(lista_adyacentes);
     }
+
     
-    
+    /*
     Node * current2= first(lista_adyacentes);
     while(current2!=NULL){
       free(current2);
       current2=next(lista_adyacentes);
     }
     cont++;
-    
+    */
     
   }
   return NULL;
