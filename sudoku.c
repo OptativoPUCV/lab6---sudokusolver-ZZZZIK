@@ -237,7 +237,7 @@ Almacene en la variable cont, la cantidad de iteraciones que realiza el algoritm
 Node* DFS(Node* initial, int* cont){
   Stack * Pila_S = createStack();
   push(Pila_S, initial);
-  while (is_empty(Pila_S)==0){
+  while (!is_empty(Pila_S)){
     (*cont)++;
     Node *  nodo_sacado = first(Pila_S);
     pop(Pila_S);
